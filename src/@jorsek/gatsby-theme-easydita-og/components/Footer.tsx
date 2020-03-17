@@ -5,10 +5,10 @@ import { Theme, makeStyles } from "@material-ui/core";
 const withStyles = makeStyles((theme: Theme) => {
     return {
         footer: {
-            backgroundColor: theme.palette.grey[400],
-            color: theme.palette.getContrastText(theme.palette.grey[300]),
+            backgroundColor: theme.palette.primary.light,
+            color: theme.palette.primary.dark,
             padding: theme.spacing(3),
-            width: "100%"
+            width: "66.666666666%"
         },
     }
 });
