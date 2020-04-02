@@ -1,0 +1,27 @@
+{
+  "name": "@jorsek/gatsby-starter-easydita",
+  "version": "0.7.0",
+  "description": "EasyDITA's static site starter project",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": false,
+  "scripts": {
+    "build": "Echo \"Done\"",
+    "clear": "rm -rf .cache public",
+    "bundle": "yarn run clear && gatsby build",
+    "docker:build": "./build_gatsby.sh",
+    "develop": "yarn run clear && gatsby develop",
+    "debug": "yarn run clear && node --nolazy --inspect-brk ../../node_modules/gatsby/dist/bin/gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "@jorsek/gatsby-theme-easydita-og": "^0.7.0",
+    "auth0-js": "~9.12.2",
+    "gatsby": "~2.19.39",
+    "prop-types": "~15.7.2",
+    "react": "~16.12.0",
+    "react-dom": "~16.12.0",
+    "react-helmet": "~5.2.1"
+  }
+}
