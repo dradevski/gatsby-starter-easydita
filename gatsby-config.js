@@ -16,10 +16,14 @@ module.exports = {
                             return {
                                 ...input,
                                 breadcrumbs: [
-                                    {
-                                        href: input.breadcrumbs[2].href,
-                                        title: `${input.breadcrumbs[1].title} (${input.breadcrumbs[2].title})`,
-                                    },
+                                    ...(input && input.breadcrumbs && input.breadcrumbs[2]
+                                        ? [
+                                              {
+                                                  href: input.breadcrumbs[2].href,
+                                                  title: `${input.breadcrumbs[1].title} (${input.breadcrumbs[2].title})`,
+                                              },
+                                          ]
+                                        : []),
                                     ...input.breadcrumbs.slice(3),
                                 ],
                             };
