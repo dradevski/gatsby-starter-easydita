@@ -1,6 +1,6 @@
 {
   "name": "@jorsek/gatsby-starter-easydita",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "EasyDITA's static site starter project",
   "main": "index.js",
   "license": "UNLICENSED",
@@ -16,7 +16,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@jorsek/gatsby-theme-easydita-og": "^0.10.0",
+    "@jorsek/gatsby-theme-easydita-og": "^0.10.1",
     "auth0-js": "~9.12.2",
     "gatsby": "~2.19.39",
     "prop-types": "~15.7.2",
