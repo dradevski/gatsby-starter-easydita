@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": false,
   "scripts": {
-    "build": "Echo \"Done\"",
+    "build": "echo \"Done\"",
     "clear": "rimraf .cache public",
     "bundle": "yarn run clear && gatsby build",
     "docker:build": "./build_gatsby.sh",
