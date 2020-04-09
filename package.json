@@ -7,7 +7,7 @@
   "private": false,
   "scripts": {
     "build": "Echo \"Done\"",
-    "clear": "rm -rf .cache public",
+    "clear": "rimraf .cache public",
     "bundle": "yarn run clear && gatsby build",
     "docker:build": "./build_gatsby.sh",
     "develop": "yarn run clear && gatsby develop",
@@ -22,6 +22,7 @@
     "prop-types": "~15.7.2",
     "react": "~16.12.0",
     "react-dom": "~16.12.0",
-    "react-helmet": "~5.2.1"
+    "react-helmet": "~5.2.1",
+    "rimraf": "^3.0.2"
   }
 }
