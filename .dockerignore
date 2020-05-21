@@ -1,0 +1,6 @@
+.cache/**/*
+ezd_content/**/*
+ezd_content_old/**/*
+node_modules/**/*
+public/**/*
+Dockerfile
