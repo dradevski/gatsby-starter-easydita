@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         heroTitle: "This is the hero title",
-        heroSubtitle: "and this is a longer subtitle, probably in a smaller font"
+        heroSubtitle: "and this is a longer subtitle, probably in a smaller font",
     },
     plugins: [
         {
