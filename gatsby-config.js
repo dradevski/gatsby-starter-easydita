@@ -14,26 +14,6 @@ module.exports = {
                 CONTENT_ORG: "",
                 CONTENT_ROOTMAP: "",
                 CONTENT_TOKEN: "",
-                CONTENT_TRANSFORMS: [
-                    {
-                        transformToPage(input) {
-                            return {
-                                ...input,
-                                breadcrumbs: [
-                                    ...(input && input.breadcrumbs && input.breadcrumbs[2]
-                                        ? [
-                                              {
-                                                  href: input.breadcrumbs[2].href,
-                                                  title: `${input.breadcrumbs[1].title} (${input.breadcrumbs[2].title})`,
-                                              },
-                                          ]
-                                        : []),
-                                    ...input.breadcrumbs.slice(3),
-                                ],
-                            };
-                        },
-                    },
-                ],
             },
         },
     ],
