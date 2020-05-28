@@ -19,7 +19,7 @@
     "@jorsek/gatsby-theme-easydita-jsk": "^0.11.0-next.33",
     "@jorsek/gatsby-theme-easydita-og": "^0.11.0-next.33",
     "auth0-js": "~9.12.2",
-    "gatsby": "~2.19.39",
+    "gatsby": "~2.22.11",
     "prop-types": "~15.7.2",
     "react": "~16.12.0",
     "react-dom": "~16.12.0",
