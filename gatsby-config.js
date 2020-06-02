@@ -5,7 +5,7 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: "@jorsek/gatsby-theme-easydita-jsk",
+            resolve: "@jorsek/gatsby-theme-easydita-og",
             options: {
                 CONTENT_RUNTIME_REMOTE: false,
                 CONTENT_BUILDTIME_REMOTE: false,
