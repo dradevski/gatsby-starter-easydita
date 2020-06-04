@@ -3,6 +3,7 @@
 mkdir -p ./static
 
 mkdir -p ./overrides # In case you don't pass any
-cp -r ./overrides/* ./src
+cp -r ./overrides/* .
 
+yarn
 gatsby build
