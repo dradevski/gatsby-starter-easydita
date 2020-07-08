@@ -1,0 +1,11 @@
+[build.environment]
+    PORTAL_CONTENT_RUNTIME_REMOTE = false
+    PORTAL_CONTENT_BUILDTIME_REMOTE = true
+    PORTAL_CONTENT_BUILDTIME_STATIC = false
+
+[template.environment]
+    PORTAL_HERO_TITLE = "Hero Title"
+    PORTAL_HERO_SUBTITLE = "Hero Subtitle"
+    PORTAL_CONTENT_ORG = "content_org"
+    PORTAL_CONTENT_ROOTMAP = "rootmap"
+    PORTAL_CONTENT_TOKEN = "token"
