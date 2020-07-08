@@ -1,0 +1,34 @@
+{
+    "name": "Gatsby Starter EasyDITA",
+    "description": "A Gatsby starting point for the EasyDITA portal framework",
+    "repository": "https://gitlab.com/Jorsek/portal/gatsby-starter-easydita",
+    "env": {
+        "PORTAL_CONTENT_RUNTIME_REMOTE": {
+            "description": "Whether or not to enable runtime remote mode",
+            "value": "false"
+        },
+        "PORTAL_CONTENT_BUILDTIME_REMOTE": {
+            "description": "Whether or not to enable buildtime remote mode",
+            "value": "true"
+        },
+        "PORTAL_CONTENT_BUILDTIME_STATIC": {
+            "description": "Whether or not to enable buildtime static mode",
+            "value": "false"
+        },
+        "PORTAL_HERO_TITLE": {
+            "description": "Hero Title"
+        },
+        "PORTAL_HERO_SUBTITLE": {
+            "description": "Hero Subtitle"
+        },
+        "PORTAL_CONTENT_ORG": {
+            "description": "EasyDITA Org ID"
+        },
+        "PORTAL_CONTENT_ROOTMAP": {
+            "description": "EasyDITA Root Map ID"
+        },
+        "PORTAL_CONTENT_TOKEN": {
+            "description": "EasyDITA Token"
+        }
+    }
+}
