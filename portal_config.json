@@ -1,0 +1,20 @@
+{
+    "heroTitle": "This is the hero title",
+    "heroSubtitle": "and this is a longer subtitle, probably in a smaller font",
+    "contentRuntimeRemote": false,
+    "contentBuildtimeRemote": false,
+    "contentBuildtimeStatic": true,
+    "contentStaticDir": "ezd_content",
+    "contentOrg": "",
+    "contentRootmap": "",
+    "contentToken": "",
+    "contentClientOpts": {
+        "scheme": "https://",
+        "loginRequired": false,
+        "rateLimit": {
+            "maxRPS": 10,
+            "maxRequests": 2
+        }
+    },
+    "theme": "@jorsek/gatsby-theme-easydita-jsk"
+}
