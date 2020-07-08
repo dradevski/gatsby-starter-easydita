@@ -6,6 +6,6 @@
 [template.environment]
     PORTAL_HERO_TITLE = "Hero Title"
     PORTAL_HERO_SUBTITLE = "Hero Subtitle"
-    PORTAL_CONTENT_ORG = "content_org"
-    PORTAL_CONTENT_ROOTMAP = "rootmap"
-    PORTAL_CONTENT_TOKEN = "token"
+    PORTAL_CONTENT_ORG = "EasyDITA Org ID"
+    PORTAL_CONTENT_ROOTMAP = "EasyDITA Root Map ID"
+    PORTAL_CONTENT_TOKEN = "EasyDITA Token"
