@@ -2,7 +2,6 @@
 const provider = require("nconf");
 
 provider
-    .file("./portal_config.json")
     .env({
         transform({ key, value }) {
             if (!key.toLowerCase().startsWith("portal")) {
@@ -10,7 +9,10 @@ provider
             }
             const k = key
                 .split("_")
-                .map((segment, idx) => (idx > 0 ? `${segment.toUpperCase()}${segment.slice(1)}` : segment))
+                .slice(1)
+                .map((segment, idx) =>
+                    idx === 0 ? segment.toLowerCase() : `${segment[0].toUpperCase()}${segment.slice(1).toLowerCase()}`,
+                )
                 .join("");
 
             console.log(key, value);
@@ -19,6 +21,7 @@ provider
         parseValues: true,
         separator: ".",
     })
+    .file("./portal_config.json")
     .defaults({ contentClientOpts: {} });
 
 module.exports = {
