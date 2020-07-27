@@ -8,12 +8,16 @@ provider
                 return false;
             }
             const k = key
+                .split("__")
+                .join("/")
                 .split("_")
                 .slice(1)
                 .map((segment, idx) =>
                     idx === 0 ? segment.toLowerCase() : `${segment[0].toUpperCase()}${segment.slice(1).toLowerCase()}`,
                 )
-                .join("");
+                .join("")
+                .split("/")
+                .join("__");
 
             console.log(key, value);
             return { key: k, value };
