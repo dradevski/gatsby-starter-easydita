@@ -19,7 +19,7 @@ provider
             return { key: k, value };
         },
         parseValues: true,
-        separator: ".",
+        separator: "__",
     })
     .file("./portal_config.json")
     .defaults({ contentClientOpts: {} });
