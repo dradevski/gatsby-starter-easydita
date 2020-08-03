@@ -1,0 +1,17 @@
+[build]
+    publish = "public/"
+    command = "yarn bundle"
+
+[build.environment]
+    PORTAL_CONTENT_RUNTIME_REMOTE = "false"
+    PORTAL_CONTENT_BUILDTIME_REMOTE = "true"
+    PORTAL_CONTENT_BUILDTIME_STATIC = "false"
+    NODE_VERSION = "12.17.0"
+
+[template.environment]
+    PORTAL_HERO_TITLE = "Hero Title"
+    PORTAL_HERO_SUBTITLE = "Hero Subtitle"
+    PORTAL_CONTENT_CLIENT_OPTS__HOSTNAME = "Content API Hostname (default: content.easydita.com)"
+    PORTAL_CONTENT_ORG = "EasyDITA Org ID"
+    PORTAL_CONTENT_ROOTMAP = "EasyDITA Root Map ID"
+    PORTAL_CONTENT_TOKEN = "EasyDITA Token"

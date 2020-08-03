@@ -1,6 +1,6 @@
 {
   "name": "@jorsek/gatsby-starter-easydita",
-  "version": "0.11.3",
+  "version": "0.12.0-next.15",
   "description": "EasyDITA's static site starter project",
   "main": "index.js",
   "license": "UNLICENSED",
@@ -8,18 +8,19 @@
   "scripts": {
     "build": "echo \"Done\"",
     "clear": "rimraf .cache public",
-    "bundle": "yarn run clear && gatsby build",
+    "bundle": "yarn run clear && env NODE_OPTIONS=--max-old-space-size=4096 node ./node_modules/.bin/gatsby build",
     "docker:build": "./build_gatsby.sh",
-    "develop": "yarn run clear && gatsby develop",
-    "debug": "yarn run clear && node --nolazy --inspect-brk ../../node_modules/gatsby/dist/bin/gatsby develop",
+    "develop": "yarn run clear && env NODE_OPTIONS=--max-old-space-size=4096 node ./node_modules/.bin/gatsby develop",
+    "debug": "yarn run clear && env NODE_OPTIONS=--max-old-space-size=4096 node --nolazy --inspect-brk ../../node_modules/gatsby/dist/bin/gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@jorsek/gatsby-theme-easydita-jsk": "^0.11.3",
-    "@jorsek/gatsby-theme-easydita-og": "^0.11.3",
+    "@jorsek/gatsby-theme-easydita-jsk": "^0.12.0-next.15",
+    "@jorsek/gatsby-theme-easydita-og": "^0.12.0-next.15",
     "auth0-js": "~9.12.2",
     "gatsby": "^2.22.17",
+    "nconf": "^0.10.0",
     "prop-types": "~15.7.2",
     "react": "~16.12.0",
     "react-dom": "~16.12.0",
@@ -27,6 +28,7 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "@types/nconf": "^0.10.0",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "eslint": "^6.8.0",
