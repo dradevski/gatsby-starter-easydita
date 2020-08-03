@@ -1,17 +1,16 @@
 {
     "heroTitle": "This is the hero title",
     "heroSubtitle": "and this is a longer subtitle, probably in a smaller font",
-    "contentRuntimeRemote": true,
+    "contentRuntimeRemote": false,
     "contentBuildtimeRemote": false,
-    "contentBuildtimeStatic": false,
+    "contentBuildtimeStatic": true,
     "contentStaticDir": "ezd_content",
-    "contentOrg": "jorsek",
-    "contentRootmap": "cb58e010-5d7e-11e5-b1e5-bc764e105744",
-    "contentToken": "60902ec2ec9c4505a14e783482be085f",
+    "contentOrg": "",
+    "contentRootmap": "",
+    "contentToken": "",
     "contentClientOpts": {
         "scheme": "https://",
         "loginRequired": false,
-        "hostname":"content-trial.easydita.com",
         "rateLimit": {
             "maxRPS": 10,
             "maxRequests": 2
