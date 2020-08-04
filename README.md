@@ -7,7 +7,6 @@ The portal framework's starter can be configured two different ways: via the `po
 
 ---
 
-
 ## Hero Title 
 > `heroTitle`, or ` PORTAL_HERO_TITLE`
 
@@ -60,3 +59,56 @@ Buildtime bundle mode works much the same way as buildtime remote mode, except i
 
 The root directory of the unzipped content bundle, when in [Buildtime Bundle Mode](#buildtime-bundle-mode)
 
+## Client Options
+> `contentClientOpts` or `PORTAL_CONTENT_CLIENT_OPTS`, default: 
+> ```
+> {
+>     "scheme": "https://",
+>     "loginRequired": false,
+>     "hostName": "content.easydita.com",
+>     "rateLimit": {
+>         "maxRPS": 10,
+>         "maxRequests": 2
+>     }
+> }
+> ```
+
+Options passed to the EasyDITA client. When setting values via environment variables, use `__` to signify object keys. 
+
+For example, to set `contentClientOpts.hostName = "content-trial.easydita.com"`, you would set `PORTAL_CONTENT_CLIENT_OPTS__HOSTNAME="content-trial.easydita.com"`
+
+## Content Transforms
+
+The portal framework supports transforming the three kinds of content it consumes before that content reaches the frontend. Given that these transforms are defined as javascript functions, they can only be defined in javascript. Since the portal supports both [Build](#buildtime-bundle-mode)[time](#buildtime-remote-mode) and [Runtime](#runtime-remote-mode) modes, the transforms need to be available both at buildtime during content sourcing, and at runtime. 
+
+In order to support this, the content transforms will be defined in the `src/transforms/index.ts` file. For example, to combine the first two breadcrumbs into one:
+
+```typescript
+// Interface pasted here for context
+interface IContentTransformer {
+    transformToGroup?(input: any): ISection;
+    transformToSection?(input: any): ISection;
+    transformToPage?(input: any, section: ISection): IPageContent;
+}
+
+export default [
+    {
+        transformToPage(input) {
+            return {
+                ...input,
+                breadcrumbs: [
+                    ...(input && input.breadcrumbs && input.breadcrumbs[2]
+                        ? [
+                                {
+                                    href: input.breadcrumbs[2].href,
+                                    title: `${input.breadcrumbs[1].title} (${input.breadcrumbs[2].title})`,
+                                },
+                            ]
+                        : []),
+                    ...input.breadcrumbs.slice(3),
+                ],
+            };
+        },
+    },
+]
+```

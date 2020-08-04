@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const provider = require("nconf");
+require("ts-node").register({ compilerOptions: { module: "commonjs" } });
 
 provider
     .env({
@@ -45,6 +46,7 @@ module.exports = {
                 CONTENT_ROOTMAP: provider.get("contentRootmap"),
                 CONTENT_TOKEN: provider.get("contentToken"),
                 CONTENT_CLIENT_OPTS: provider.get("contentClientOpts"),
+                CONTENT_TRANSFORMS: require("./src/transforms/index").default,
             },
         },
     ],
