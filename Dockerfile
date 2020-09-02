@@ -3,7 +3,7 @@ FROM node:alpine
 ADD . /src
 WORKDIR /src
 
-RUN apk add autoconf
+RUN apk add autoconf automake
 
 RUN yarn install --production
 
