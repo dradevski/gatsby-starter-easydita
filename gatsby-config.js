@@ -27,7 +27,7 @@ provider
         separator: "__",
     })
     .file("./portal_config.json")
-    .defaults({ contentClientOpts: {} });
+    .defaults({ contentClientOpts: {}, redirectToFirstContentfulChild: true });
 
 module.exports = {
     siteMetadata: {
@@ -46,6 +46,7 @@ module.exports = {
                 CONTENT_ROOTMAP: provider.get("contentRootmap"),
                 CONTENT_TOKEN: provider.get("contentToken"),
                 CONTENT_CLIENT_OPTS: provider.get("contentClientOpts"),
+                REDIRECT_TO_FIRST_CONTENTFUL_CHILD: provider.get("redirectToFirstContentfulChild"),
                 CONTENT_TRANSFORMS: require("./src/transforms/index").default,
             },
         },

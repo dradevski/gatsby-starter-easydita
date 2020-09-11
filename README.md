@@ -112,3 +112,16 @@ export default [
     },
 ]
 ```
+
+## Gated Features
+Some features truly deserve first-class support in the framework, while at the same time need to be disabled for some customers. Those features shall live behind gates, as described here
+
+### Redirect to first content-ful child
+> `redirectToFirstContentfulChild`, or `PORTAL_REDIRECT_TO_FIRST_CONTENTFUL_CHILD`, default: `true`
+
+Frequently, sections will exist purely to organize their content pages into a meaningful order, without themselves having any content. This feature causes specific types of content pages to search for, and redirect to the first child that does not meet the redirect conditions in a depth-first manner. These conditions are:
+
+* Page's `type` is `topichead`
+* Page's content is an empty string
+
+This feature should be **disabled** for portals that define dynamic intermediate content pages, such as to render the child pages as cards or a list of links.
