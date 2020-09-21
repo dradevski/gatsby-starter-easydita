@@ -1,5 +1,27 @@
+<!-- omit in toc -->
 # Deploying
+Deploying to Netlify will create a *clone* of the starter in your Git(Hub|Lab|Bucket) account, and automatically wire up that repo to the newly created netlify site such that when you push to your new repo, your changes will be automatically built and deployed to Netlify.
+
 [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/Jorsek/portal/gatsby-starter-easydita)
+
+<!-- omit in toc -->
+# Table of Contents
+
+- [Configuring](#configuring)
+  - [Hero Title](#hero-title)
+  - [Hero Subtitle](#hero-subtitle)
+  - [Theme](#theme)
+  - [Runtime Remote Mode](#runtime-remote-mode)
+  - [Buildtime Remote Mode](#buildtime-remote-mode)
+    - [Content Org](#content-org)
+    - [Content Rootmap](#content-rootmap)
+    - [Content Token](#content-token)
+  - [Buildtime Bundle Mode](#buildtime-bundle-mode)
+    - [Content Static Dir](#content-static-dir)
+  - [Client Options](#client-options)
+- [Content Transforms](#content-transforms)
+- [Gated Features](#gated-features)
+  - [Redirect to first content-ful child](#redirect-to-first-content-ful-child)
 
 # Configuring
 
@@ -77,7 +99,7 @@ Options passed to the EasyDITA client. When setting values via environment varia
 
 For example, to set `contentClientOpts.hostName = "content-trial.easydita.com"`, you would set `PORTAL_CONTENT_CLIENT_OPTS__HOSTNAME="content-trial.easydita.com"`
 
-## Content Transforms
+# Content Transforms
 
 The portal framework supports transforming the three kinds of content it consumes before that content reaches the frontend. Given that these transforms are defined as javascript functions, they can only be defined in javascript. Since the portal supports both [Build](#buildtime-bundle-mode)[time](#buildtime-remote-mode) and [Runtime](#runtime-remote-mode) modes, the transforms need to be available both at buildtime during content sourcing, and at runtime. 
 
@@ -113,10 +135,10 @@ export default [
 ]
 ```
 
-## Gated Features
+# Gated Features
 Some features truly deserve first-class support in the framework, while at the same time need to be disabled for some customers. Those features shall live behind gates, as described here
 
-### Redirect to first content-ful child
+## Redirect to first content-ful child
 > `redirectToFirstContentfulChild`, or `PORTAL_REDIRECT_TO_FIRST_CONTENTFUL_CHILD`, default: `true`
 
 Frequently, sections will exist purely to organize their content pages into a meaningful order, without themselves having any content. This feature causes specific types of content pages to search for, and redirect to the first child that does not meet the redirect conditions in a depth-first manner. These conditions are:
